@@ -1,0 +1,32 @@
+Defining Widgets and Elements
+The Flutter UI is implemented by using widgets from a modern reactive framework. Flutter uses its 
+own rendering engine to draw widgets. In Chapter 5, “Understanding the Widget Tree,” you’ll get 
+an introduction to widgets, and in Chapter 6, “Using Common Widgets,” you’ll learn how to implement widgets.
+You might be asking, what is a widget? Widgets can be compared to LEGO blocks; by adding blocks 
+together, you create an object, and by adding different kinds of blocks, you can alter the look and 
+behavior of the object. Widgets are the building blocks of a Flutter app, and each widget is an immutable declaration of the user interface. In other words, widgets are configurations (instructions) for 
+different parts of the UI. Placing the widgets together creates the widget tree. For example, say an 
+architect draws a blueprint of a house; all of the objects like walls, windows, and doors in the house 
+are the widgets, and all of them work together to create the house or, in this case, the application.
+Since widgets are the configuration pieces of the UI and together they create the widget tree, how 
+does Flutter use these configurations? Flutter uses the widget as the configuration to build each element, which means the element is the widget that is mounted (rendered) on the screen. The elements 
+that are mounted on the screen create the element tree. You’ll learn more about the widget tree and 
+element tree in the next section, “Understanding the Widget Tree and the Element Tree.” You’ll also 
+learn to manipulate the widget tree in detail in Chapter 5
+
+
+
+
+
+
+Here’s a brief look at the wide array of widgets at your disposal:
+➤ Widgets with structuring elements such as a list, grid, text, and button
+➤ Widgets with input elements such as a form, form fields, and keyboard listeners
+➤ Widgets with styling elements such as font type, size, weight, color, border, and shadow
+➤ Widgets to lay out the UI such as row, column, stack, centering, and padding
+➤ Widgets with interactive elements that respond to touch, gestures, dragging, and dismissible
+➤ Widgets with animation and motion elements such as hero animation, animated container, 
+animated crossfade, fade transition, rotation, scale, size, slide, and opacity
+➤ Widgets with elements like assets, images, and icons
+➤ Widgets that can be nested together to create the UI needed
+➤ Custom widgets you can create yourself

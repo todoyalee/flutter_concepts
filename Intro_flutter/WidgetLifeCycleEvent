@@ -1,0 +1,10 @@
+In programming, you have different lifecycle events that usually happen in a linear mode, one 
+after another as each stage is completed. In this section, you’ll learn the widget lifecycle events and 
+their purpose.
+To build the UI, you use two main types of widgets, StatelessWidget and StatefulWidget. A 
+stateless widget is used when the values (state) do not change, and the stateful widget is used when 
+6 ❘ CHAPTER 1 Introducing Flutter and Getting Started
+values (state) change. In Chapter 2, “Creating a Hello World App,” you’ll learn in detail when to use 
+a StatelessWidget or a StatefulWidget. Each stateless or stateful widget has a build method 
+with a BuildContext that handles the location of the widget in the widget tree. The BuildContext
+objects are actually Element objects, an instantiation of the Widget at a location in the tree

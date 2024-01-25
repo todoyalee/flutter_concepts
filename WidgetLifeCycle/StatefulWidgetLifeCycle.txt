@@ -1,0 +1,120 @@
+A StatefulWidget is built based on its own configuration but can change dynamically. For example, 
+the screen displays an icon with a description, but values can change based on the user’s interaction, 
+like choosing a different icon or description. This type of widget has a mutable state that can change 
+over time. The stateful widget is declared with two classes, the StatefulWidget class and the State
+class. The StatefulWidget class is rebuilt when the widget’s configuration changes, but the State
+class can persist (remain), enhancing performance. For example, when the state changes, the widget is 
+rebuilt. If the StatefulWidget is removed from the tree and then inserted back into the tree some time in the future, a new State object is created. Note that under certain circumstances and restrictions, you can use a GlobalKey (unique key across entire app) to reuse (not re-create) the State
+object; however, global keys are expensive, and unless they’re needed, you might want to consider not 
+using them. You call the setState() method to notify the framework that this object has changes, 
+and the widget’s build method is called (scheduled). You would set the new state values inside the 
+setState() method. In Chapter 2, you’ll learn how to call the setState() method.
+The following example shows a StatefulWidget base structure, and Figure 1.2 displays the 
+widget’s lifecycle. You have two classes, the JournalEdit StatefulWidget class and the _Journal
+
+
+EditState class.
+class JournalEdit extends StatefulWidget {
+ @override
+ _ JournalEditState createState() => _ JournalEditState();
+StatelessWidget
+Constructor
+build
+FIGURE 1.1: StatelessWidget lifecycle
+Understanding Widget Lifecycle Events ❘ 7
+}
+class _JournalEditState extends State<JournalEdit> {
+ @override
+ Widget build(BuildContext context) {
+ return Container();
+ }
+}
+
+
+
+
+You can override different portions of the StatefulWidget to customize and manipulate data at different points of the widget lifecycle. Table 1.1 shows some of the stateful widget main overrides, and 
+the majority of the time you’ll use the initState(), didChangeDependencies(), and dispose()
+methods. You’ll use the build() method all of the time to build your UI.
+
+
+
+
+
+
+initState() Called once when 
+this object is inserted 
+into the tree.
+@override
+void initState() { 
+ super.initState();
+ print('initState');
+}
+dispose() Called when this 
+object is removed 
+from the tree 
+permanently.
+@override
+void dispose() {
+ print('dispose');
+ super.dispose()
+}
+
+
+
+
+
+
+didChangeDependencies() Called when 
+this State
+object changes.
+@override
+void didChangeDependencies() {
+ super.didChangeDependencies();
+ print('didChangeDependencies');
+}
+didUpdateWidget­
+(Contacts oldWidget)
+Called when the 
+widget configuration 
+changes.
+@override
+void didUpdateWidget(Contacts 
+oldWidget) {
+super.didUpdateWidget(oldWidget);
+print('didUpdateWidget: 
+$oldWidget');
+}
+deactivate() Called when this 
+object is removed 
+from the tree.
+@override
+void deactivate() {
+ print('deactivate');
+ super.deactivate();
+}
+build(BuildContext 
+context)
+Can be called 
+multiple times to 
+build the UI, and 
+the BuildContext
+handles the location 
+of this widget in the 
+widget tree.
+@override
+Widget build(BuildContext 
+context) {
+ print('build');
+ return Container();
+}
+setState() Notifies the 
+framework that the 
+state of this object 
+has changed to 
+schedule calling 
+the build for this 
+State object.
+setState(() {
+ name = _newValue;
+})

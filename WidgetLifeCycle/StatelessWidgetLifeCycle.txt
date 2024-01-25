@@ -1,0 +1,19 @@
+The StatelessWidget Lifecycle
+A StatelessWidget is built based on its own configuration and does 
+not change dynamically. For example, the screen displays an image with 
+a description and will not change. The stateless widget is declared with 
+one class, and you’ll learn about classes in Chapter 3. The build (the UI 
+portions) method of the stateless widget can be called from three different 
+scenarios. It can be called the first time the widget is created, when the 
+widget’s parent changes, and when an InheritedWidget has changed. 
+In Chapter 15, “Adding State Management to the Firestore Client App,” 
+you’ll learn how to implement the InheritedWidget.
+The following sample code shows a StatelessWidget base structure, 
+and Figure 1.1 displays the widget’s lifecycle.
+class JournalList extends StatelessWidget {
+ @override
+ Widget build(BuildContext context) {
+ return Container();
+ }
+}
+The StatefulWidget Lifec

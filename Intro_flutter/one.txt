@@ -1,0 +1,30 @@
+Flutter is Google’s portable UI framework for building modern, native, and reactive applications 
+for iOS and Android. Google is also working on Flutter desktop embedding and Flutter for the Web 
+(Hummingbird) and embedded devices (Raspberry Pi, home, automotive, and more). Flutter is an 
+open-source project hosted on GitHub with contributions from Google and the community. Flutter 
+uses Dart, a modern object-oriented language that compiles to native ARM code and productionready JavaScript code. Flutter uses the Skia 2D rendering engine that works with different types of 
+hardware and software platforms and is also used by Google Chrome, Chrome OS, Android, Mozilla 
+Firefox, Firefox OS, and others. Skia is sponsored and managed by Google and is available for anyone to use under the BSD Free Software License. Skia uses a CPU-based path render and also supports the OpenGL ES2-accelerated backend.
+Dart is the language that you’ll use to develop your Flutter applications, and you’ll learn more about 
+it in Chapter 3, “Learning Dart Basics.” Dart is ahead-of-time (AOT) compiled to native code, making 
+your Flutter application fast. Dart is also just-in-time (JIT) compiled, making it fast to display your 
+code changes such as via Flutter’s stateful hot reload feature.
+Flutter uses Dart to create your user interface, removing the need to use separate languages like 
+Markup or visual designers. Flutter is declarative; in other words, Flutter builds the UI to reflect 
+the state of the app. When the state (data) changes, the UI is redrawn, and Flutter constructs a new 
+instance of the widget. In the “Understanding the Widget Tree and the Element Tree” section of this 
+chapter, you’ll learn how widgets are configured and mounted (rendered) creating the widget tree and 
+element tree, but under the hood, the render tree (a third tree) uses the RenderObject, which computes and implements the basic layout and paint protocols. (You won’t need to interact directly with 
+the render tree or the RenderObject, and I won’t discuss them further in this book.)
+Flutter is fast, and the rendering runs at 60 frames per second (fps) and 120fps for capable devices. 
+The higher the fps, the smoother the animations and transitions.
+Applications made in Flutter are built from a single codebase, are compiled to native ARM code, use 
+the graphics processing unit (GPU), and can access specific iOS and Android APIs (like GPS location, 
+image library) by communicating via platform channels. You’ll learn more about platform channels in 
+Chapter 12, “Writing Platform-Native Code.”
+Flutter provides the developer with tools to create beautiful and professional-looking applications 
+and with the ability to customize any aspect of the application. You’ll be able to add smooth animations, gesture detection, and splash feedback behavior to the UI. Flutter applications result in native 
+performance for both iOS and Android platforms. During development, Flutter uses hot reload to 
+refresh the running application in milliseconds when you change the source code to add new features 
+or modify existing ones. Using hot reload is a great way to see the changes you make to your code on 
+the simulator or device while keeping the application’s state, the data values, on the screen
